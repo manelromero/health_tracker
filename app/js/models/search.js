@@ -8,7 +8,11 @@ var app = app || {};
 		defaults: {
 			food: '',
 			calories: 0
-		}
+		},
+
+		initialize: function() {
+			//
+		},
 
 	});
 

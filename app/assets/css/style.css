@@ -13,7 +13,7 @@ html {
 body {
 	margin-top: 20px;
 	font: 400 1rem/1rem Roboto, sans-serif;
-	background-color: #c49fd6;
+	background-color: #91759e;
 }
 
 .container {
@@ -30,25 +30,32 @@ body {
 
 header {
 	width: 100%;
-	padding: 1rem;
+	padding: 2%;
 	font: normal 1rem 'Roboto Slab', serif;
 	border-bottom: 1px solid #ccc;
 }
 
 h1 {
-	color: #724986;
+	color: #91759e;
 }
 
 .search {
+	position: relative;
 	width: 50%;
-	padding: 1rem;
+	padding: 2%;
 	min-height: 150px;
 }
 
+label {
+	display: inline-block;
+	float: left;
+	font: 500 1rem/2rem Roboto, sans-serif;
+	width: 15%;
+}
+
 input {
-	width: 80%;
+	width: 85%;
 	font: normal 1rem/2rem Roboto, sans-serif;
-	margin-left: 0.5rem;
 	padding: 0 0.3rem;
 	outline: none;
 	border: 1px solid #ccc;
@@ -56,16 +63,36 @@ input {
 	background-color: #eee;
 }
 
+.results-window {
+	position: absolute;
+	display: none;
+	width: 78%;
+	right: 4%;
+	background-color: #fff;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .search-list {
-	margin-top: 15px;
+	padding: 2%;
 	list-style: none;
-	font: normal 1rem Roboto, sans-serif;
+}
+
+.result {
+	font: normal 1rem/1.2rem Roboto, sans-serif;
+	padding: 5px;
 	color: #666;
+}
+
+.result:hover {
+	background-color: #eee;
+	cursor: pointer;
 }
 
 .list {
 	width: 50%;
-	padding: 1rem;
+	padding: 2%;
 	min-height: 150px;
 	border-left: 1px solid #ccc;
 }

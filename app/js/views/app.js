@@ -5,59 +5,47 @@ var app = app || {};
 
 	app.AppView = Backbone.View.extend({
 
-		el: $('#search-input'),
+		el: $('#search'),
 
 		events: {
-			'input': 'search',
-			'keypress': 'enter',
+			'input #search-input': 'search',
+			'keyup': 'enter',
 		},
 
 		initialize: function() {
+			this.model = new app.SearchList();
 			this.input = $('#search-input');
+			this.resultsWindow = $('#results-window');
+			this.listenTo(this.model, 'sync', this.render);
+			this.listenToOnce(this.model, 'sync', this.addView);
 		},
 
 		search: function() {
-
-			this.model = new app.SearchList();
 			this.model.searchText(this.input.val());
-
-			var list = $('#search-list');
-			list.empty();
-
-			this.model.fetch({
-
-				success: function(result) {
-
-					result.each(function(res) {
-						app.searches.push(new app.Search({
-							food: res.get('fields').item_name,
-							calories: res.get('fields').nf_calories
-						}));
-						//list.append('<li class="aaa">' + res.get('fields').item_name + '</li>');
-					});
-
-					app.searches.each(function(search) {
-						list.append('<li class="aaa">' + search.get('food') + '</li>');
-					});
-
-				},
-
-				error: function() {
-					console.log('fetch error');
-				}
-
-			});
-
+			if (this.input.val()) {
+				this.model.fetch();
+				this.resultsWindow.css('display', 'block');
+			} else {
+				this.resultsWindow.css('display', 'none');
+			}
 		},
 
-		render: function(res) {
-			console.log('rendering');
+		render: function(results) {
+			var list = $('#search-list');
+			list.empty();
+			results.each(function(result) {
+				list.append('<li class="result">' + result.get('fields').item_name + '</li>');
+			});
 		},
 
 		enter: function(e) {
-			if (e.which == 13) console.log('Enter key pressed');
-		}
+			if (e.keyCode == 27) this.input.val(null);
+			if (e.keyCode == 13) console.log('Enter key pressed');
+		},
 
+		addView: function() {
+			new app.SearchView();
+		}
 
 	})
 

@@ -32,10 +32,6 @@ var app = app || {};
 
 		parse: function(response) {
 			return response.hits;
-		},
-
-		clicked: function() {
-			console.log('clicked');
 		}
 
 	})
