@@ -3,13 +3,24 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<title>Health tracker</title>
 </head>
 <body>
-
-	Hello world
+	<div class="container">
+		<header>
+			<h1>Health tracker</h1>
+		</header>
+		<div id="search" class="search">
+      <label for="search">Food</label>
+      <input id="search-input" placeholder="Which food are we talking about?" autofocus>
+      <ul id="search-list" class="search-list"></ul>
+		</div>
+		<div class="list">This is the list of food</div>
+		<div class="footer">This is the footer</div>
+	</div>
 
 
 	<!-- Load scripts -->
@@ -18,7 +29,12 @@
 	<script src="js/lib/backbone.js"></script>
 	<script src="js/lib/backbonefire.js"></script>
 
-	<script src="js/script.js"></script>
+	<script src="js/models/search.js"></script>
+	<script src="js/views/app.js"></script>
+	<script src="js/views/search.js"></script>
+	<script src="js/views/searchlist.js"></script>
+	<script src="js/collections/searchlist.js"></script>
+	<script src="js/app.js"></script>
 
 </body>
 </html>

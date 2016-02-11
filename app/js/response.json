@@ -1,0 +1,156 @@
+{
+   "total_hits":41456,
+   "max_score":11.617755,
+   "hits":[
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"513fceb375b8dbbc21000021",
+         "_score":11.617755,
+         "fields":{
+            "item_id":"513fceb375b8dbbc21000021",
+            "item_name":"Cheese, cheddar - 1 cup, melted",
+            "brand_name":"USDA",
+            "nf_calories":990.64,
+            "nf_total_fat":82.52,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"513fceb375b8dbbc21000022",
+         "_score":11.534744,
+         "fields":{
+            "item_id":"513fceb375b8dbbc21000022",
+            "item_name":"Cheese, cheddar - 1 cup, diced",
+            "brand_name":"USDA",
+            "nf_calories":535.92,
+            "nf_total_fat":44.64,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"513fceb375b8dbbc2100001d",
+         "_score":11.464351,
+         "fields":{
+            "item_id":"513fceb375b8dbbc2100001d",
+            "item_name":"Cheese, cheddar - 1 oz",
+            "brand_name":"USDA",
+            "nf_calories":115.1,
+            "nf_total_fat":9.59,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"463d62377c55afd998c48efa",
+         "_score":11.293941,
+         "fields":{
+            "item_id":"463d62377c55afd998c48efa",
+            "item_name":"Cheese, cheddar - 1 slice (1 oz)",
+            "brand_name":"USDA",
+            "nf_calories":113.68,
+            "nf_total_fat":9.47,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"513fceb375b8dbbc2100001e",
+         "_score":11.1708145,
+         "fields":{
+            "item_id":"513fceb375b8dbbc2100001e",
+            "item_name":"Cheese, cheddar - 1 cubic inch",
+            "brand_name":"USDA",
+            "nf_calories":69.02,
+            "nf_total_fat":5.75,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"513fceb375b8dbbc21000020",
+         "_score":11.1708145,
+         "fields":{
+            "item_id":"513fceb375b8dbbc21000020",
+            "item_name":"Cheese, cheddar - 1 cup, shredded",
+            "brand_name":"USDA",
+            "nf_calories":458.78,
+            "nf_total_fat":38.22,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"551e0832afbd58f827666b00",
+         "_score":1.6324043,
+         "fields":{
+            "item_id":"551e0832afbd58f827666b00",
+            "item_name":"Cheddar Cheese",
+            "brand_name":"Tastee Cheese",
+            "nf_calories":100,
+            "nf_total_fat":8,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"546b63197af64a887e75f6fc",
+         "_score":1.591506,
+         "fields":{
+            "item_id":"546b63197af64a887e75f6fc",
+            "item_name":"Cheddar Cheese",
+            "brand_name":"Moon Cheese",
+            "nf_calories":70,
+            "nf_total_fat":5,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"545ce563d43cefdf6dbf7fe0",
+         "_score":1.4957235,
+         "fields":{
+            "item_id":"545ce563d43cefdf6dbf7fe0",
+            "item_name":"Mild Cheddar Cheese",
+            "brand_name":"Steve's Cheese",
+            "nf_calories":110,
+            "nf_total_fat":9,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      },
+      {
+         "_index":"f762ef22-e660-434f-9071-a10ea6691c27",
+         "_type":"item",
+         "_id":"55e35184a2630bff23a571a4",
+         "_score":1.4957235,
+         "fields":{
+            "item_id":"55e35184a2630bff23a571a4",
+            "item_name":"Cheese, Processed Cheddar",
+            "brand_name":"Tastee Cheese",
+            "nf_calories":100,
+            "nf_total_fat":8,
+            "nf_serving_size_qty":1,
+            "nf_serving_size_unit":"serving"
+         }
+      }
+   ]
+}
