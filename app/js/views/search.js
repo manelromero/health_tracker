@@ -5,7 +5,7 @@ var app = app || {};
 
 	app.SearchView = Backbone.View.extend({
 
-		el: $('#search-list'),
+		template: _.template($('#search-template').html()),
 
 		events: {
 			'click': 'clicked'
@@ -16,7 +16,11 @@ var app = app || {};
 		},
 
 		clicked: function() {
-			console.dir(this);
+			console.log('clicked:', this);
+		},
+
+		render: function() {
+			return this.$el.html(this.template(this.model.toJSON()));
 		}
 
 	})

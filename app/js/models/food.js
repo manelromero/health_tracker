@@ -1,8 +1,15 @@
-var Food = Backbone.Model.extend({
+var app = app || {};
 
-	defaults: {
-		name: '',
-		calories: 0
-	}
+(function() {
+	'use strict';
 
-})
+	app.Food = Backbone.Model.extend({
+
+		defaults: {
+			name: '',
+			calories: 0
+		}
+
+	})
+
+})();

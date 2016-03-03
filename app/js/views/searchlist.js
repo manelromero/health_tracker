@@ -5,50 +5,41 @@ var app = app || {};
 
 	app.SearchListView = Backbone.View.extend({
 
-		el: $('#search-input'),
+		el: $('#search'),
 
 		events: {
-			'input': 'search',
+			'input #search-input': 'search',
 			'keypress': 'enter'
 		},
 
 		initialize: function() {
+			app.searchList = new app.SearchList();
 			this.input = $('#search-input');
-			console.log('SearchView initialized');
+			this.resultsWindow = $('#results-window')[0];
+			this.listenTo(app.searchList, 'sync', this.render);
 		},
 
 		search: function() {
-
-			this.model = new app.SearchList();
-			this.model.searchText(this.input.val());
-
-			var list = $('#search-list');
-			list.empty();
-
-			this.model.fetch({
-
-				success: function(result) {
-
-					result.each(function(res) {
-						new app.Search({
-							food: res.get('fields').item_name,
-							calories: res.get('fields').nf_calories
-						})
-						list.append('<li>' + res.get('fields').item_name + '</li>');
-					});
-
+			app.searchList.setSearchText(this.input.val());
+			app.searchList.fetch({
+				success: function() {
+					console.log('fetch correct');
 				},
-
 				error: function() {
 					console.log('fetch error');
 				}
-
 			});
-
 		},
 
-		render: function(res) {
-			console.log('rendering');
+		render: function() {
+			this.resultsWindow.style.display = this.input.val() ? 'block' : 'none';
+			var list = $('#search-list').empty();
+
+			app.searchList.each(function(element) {
+				var view = new app.SearchView({model: element});
+				list.append(view.render());
+			});
+
 		},
 
 		enter: function(e) {

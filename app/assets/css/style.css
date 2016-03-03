@@ -81,13 +81,31 @@ input {
 
 .result {
 	font: normal 1rem/1.2rem Roboto, sans-serif;
-	padding: 5px;
+	padding: 1%;
 	color: #666;
+	display: flex;
+	flex-wrap: wrap;
+
 }
 
 .result:hover {
 	background-color: #eee;
 	cursor: pointer;
+}
+
+.result-food {
+	width: 75%;
+	padding-right: 1%;
+	text-align: justify;
+}
+
+.result-calories {
+	width: 25%;
+	float: right;
+	text-align: right;
+	color: #7c9b44;
+	white-space: nowrap;
+  overflow: hidden;
 }
 
 .list {

@@ -4,6 +4,5 @@ var app = app || {};
 	'use strict';
 
 	new app.AppView();
-	console.log('App started');
 
 })();
