@@ -16,7 +16,14 @@ var app = app || {};
 		},
 
 		clicked: function() {
-			console.log('clicked:', this);
+
+			var food = new app.Food({
+				name: this.model.get('food'),
+				calories: this.model.get('calories')
+			});
+
+			app.foodList.add(food);
+
 		},
 
 		render: function() {

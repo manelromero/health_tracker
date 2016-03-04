@@ -5,7 +5,6 @@ var app = app || {};
 
 	app.FoodView = Backbone.View.extend({
 
-		template: _.template($('#food-template').html()),
 
 		events: {
 			//
@@ -16,7 +15,7 @@ var app = app || {};
 		},
 
 		clicked: function() {
-			console.log('clicked:', this);
+			//
 		},
 
 		render: function() {

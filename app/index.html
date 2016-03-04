@@ -11,7 +11,7 @@
 <body>
 	<div class="container">
 		<header>
-			<h1>Health tracker</h1>
+			<h1>Calories Counter</h1>
 		</header>
 		<div id="search" class="search">
       <label for="search-input">Food</label>
@@ -20,7 +20,10 @@
       	<ul id="search-list" class="search-list"></ul>
       </div>
 		</div>
-		<div class="list">This is the list of food</div>
+		<div id="list" class="list">
+			<h2>Your food list</h2>
+			<ul id="food-element" class="food-element"></ul>
+		</div>
 		<div class="footer">This is the footer</div>
 	</div>
 
@@ -47,10 +50,12 @@
 	<script src="js/models/food.js"></script>
 	<script src="js/models/search.js"></script>
 	<script src="js/views/app.js"></script>
-	<script src="js/views/food.js"></script>
-	<script src="js/views/search.js"></script>
 	<script src="js/views/searchlist.js"></script>
+	<script src="js/views/search.js"></script>
+	<script src="js/views/foodlist.js"></script>
+	<script src="js/views/food.js"></script>
 	<script src="js/collections/searchlist.js"></script>
+	<script src="js/collections/foodlist.js"></script>
 	<script src="js/app.js"></script>
 
 </body>

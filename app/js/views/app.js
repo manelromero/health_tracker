@@ -7,6 +7,7 @@ var app = app || {};
 
 		initialize: function() {
 			new app.SearchListView();
+			new app.FoodListView();
 		},
 
 		enter: function(e) {

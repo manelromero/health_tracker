@@ -36,14 +36,26 @@ header {
 }
 
 h1 {
+	font: bold 2rem 'Roboto Slab', serif;
 	color: #91759e;
 }
 
-.search {
+h2 {
+	font: bold 1.5rem 'Roboto Slab', serif;
+	color: #91759e;
+	margin-bottom: 0.8rem;
+}
+
+.search,
+.list {
 	position: relative;
 	width: 50%;
 	padding: 2%;
 	min-height: 150px;
+}
+
+.list {
+	border-left: 1px solid #ccc;
 }
 
 label {
@@ -85,7 +97,6 @@ input {
 	color: #666;
 	display: flex;
 	flex-wrap: wrap;
-
 }
 
 .result:hover {
@@ -108,12 +119,29 @@ input {
   overflow: hidden;
 }
 
-.list {
-	width: 50%;
-	padding: 2%;
-	min-height: 150px;
-	border-left: 1px solid #ccc;
+.food {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
 }
+
+.food-name {
+	width: 75%;
+	padding-right: 1%;
+	font: normal 1.2rem/1.5rem Roboto, sans-serif;
+	text-align: justify;
+}
+
+.food-calories {
+	width: 25%;
+	float: right;
+	text-align: right;
+	font: normal 1.2rem/1.5rem Roboto, sans-serif;
+	color: #7c9b44;
+	white-space: nowrap;
+  overflow: hidden;
+}
+
 
 .footer {
 	width: 100%;
