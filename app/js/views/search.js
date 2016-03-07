@@ -11,11 +11,13 @@ var app = app || {};
 			'click': 'clicked'
 		},
 
-		initialize: function() {
-			//
-		},
-
 		clicked: function() {
+
+			var input = $('#search-input'),
+					resultsWindow = $('#results-window')[0];
+
+			resultsWindow.style.display = 'none';
+			input.val('');
 
 			var food = new app.Food({
 				name: this.model.get('food'),
@@ -23,6 +25,7 @@ var app = app || {};
 			});
 
 			app.foodList.add(food);
+			food.save();
 
 		},
 

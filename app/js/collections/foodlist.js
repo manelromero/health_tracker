@@ -7,6 +7,8 @@ var app = app || {};
 
 		model: app.Food,
 
+		localStorage: new Backbone.LocalStorage('localFoodList')
+
 	});
 
 })();

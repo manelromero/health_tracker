@@ -33,7 +33,7 @@ var app = app || {};
 			for (var i = 0; i < responseLength; i++) {
 				var search = new app.Search({
 					food: response.hits[i].fields.item_name,
-					calories: response.hits[i].fields.nf_calories
+					calories: parseFloat(Math.round(response.hits[i].fields.nf_calories * 100) / 100).toFixed(2)
 				});
 				searchArray.push(search);
 			};

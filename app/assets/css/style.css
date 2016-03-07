@@ -125,14 +125,16 @@ input {
 	flex-wrap: wrap;
 }
 
-.food-name {
+.food-name,
+.counter-text {
 	width: 75%;
 	padding-right: 1%;
 	font: normal 1.2rem/1.5rem Roboto, sans-serif;
 	text-align: justify;
 }
 
-.food-calories {
+.food-calories,
+.counter {
 	width: 25%;
 	float: right;
 	text-align: right;
@@ -142,19 +144,26 @@ input {
   overflow: hidden;
 }
 
-
 .footer {
 	width: 100%;
-	padding: 1rem;
 	background-color: #ddd;
 	border-bottom-left-radius: 7px;
 	border-bottom-right-radius: 7px;
 }
 
+.total-calories {
+	width: 50%;
+	float: right;
+	padding: 2%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
 @media screen and (max-width: 750px) {
 
 	.search,
-	.list {
+	.list,
+	.footer {
 		width: 100%;
 	}
 
