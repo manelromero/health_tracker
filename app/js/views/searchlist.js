@@ -22,9 +22,6 @@ var app = app || {};
 		search: function() {
 			app.searchList.setSearchText(this.input.val());
 			app.searchList.fetch({
-				success: function() {
-					console.log('fetch correct');
-				},
 				error: function() {
 					console.log('fetch error');
 				}
@@ -40,10 +37,6 @@ var app = app || {};
 				list.append(view.render());
 			});
 
-		},
-
-		enter: function(e) {
-			if (e.which == 13) console.log('Enter key pressed');
 		}
 
 	});

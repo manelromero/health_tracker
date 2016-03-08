@@ -8,14 +8,15 @@ var app = app || {};
 		initialize: function() {
 			new app.SearchListView();
 			new app.FoodListView();
-			//localStorage.clear();
-		},
+		}
 
-		enter: function(e) {
-			if (e.keyCode == 27) this.input.val(null);
-			if (e.keyCode == 13) console.log('Enter key pressed');
-		},
+	});
 
-	})
+	app.viewHelpers = {
+		// I found this solution in http://bit.ly/1ooHsSO
+		numberWithCommas: function(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		}
+	};
 
 })();

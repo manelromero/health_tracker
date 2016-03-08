@@ -5,24 +5,28 @@ var app = app || {};
 
 	app.FoodListView = Backbone.View.extend({
 
-		el: $('#food-element'),
-
-		template: _.template($('#food-template').html()),
-
 		initialize: function() {
 			app.foodList = new app.FoodList();
-			this.counterVal = 0;
-			this.counter = $('#counter');
-			this.listenTo(app.foodList, 'add', this.render);
+			this.listenTo(app.foodList, 'sync', this.render);
+			this.listenTo(app.foodList, 'remove', this.render);
 			app.foodList.fetch();
 		},
 
-		render: function(food) {
-			this.$el.append(this.template(food.toJSON()));
-			this.counterVal += parseInt(food.get('calories'));
-			this.counter.html(parseFloat(Math.round(this.counterVal * 100)/ 100).toFixed(2) + ' cal');
+		render: function() {
+
+			var yourList = $('#food-element').empty(),
+					counterVal = 0,
+					counter = $('#counter');
+
+			app.foodList.each(function(food) {
+				var view = new app.FoodView({model: food});
+				yourList.append(view.render());
+				counterVal += parseFloat(food.get('calories'));
+				counter.html(app.viewHelpers.numberWithCommas(counterVal.toFixed(2)) + ' cal');
+			});
+
 		}
 
-	})
+	});
 
 })();

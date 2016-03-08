@@ -10,6 +10,6 @@ var app = app || {};
 			calories: 0
 		}
 
-	})
+	});
 
 })();

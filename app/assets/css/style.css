@@ -140,9 +140,29 @@ input {
 	flex-wrap: wrap;
 }
 
+.food:hover {
+	background-color: #eee;
+	cursor: pointer;
+}
+
+.food:hover .icon {
+    opacity: 1;
+}
+
+.delete-icon {
+	width: 4%;
+	padding-left: 1%;
+}
+
+.icon {
+	width: 1rem;
+	height: 1.5rem;
+	opacity: 0.1;
+}
+
 .food-name,
 .counter-text {
-	width: 70%;
+	width: 65%;
 	padding-right: 1%;
 	font: 400 1rem/1.5rem Roboto, sans-serif;
 	color: #212121;

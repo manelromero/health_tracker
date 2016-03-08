@@ -5,23 +5,20 @@ var app = app || {};
 
 	app.FoodView = Backbone.View.extend({
 
+		template: _.template($('#food-template').html()),
 
 		events: {
-			//
+			'click': 'delete'
 		},
 
-		initialize: function() {
-			//
-		},
-
-		clicked: function() {
-			//
+		delete: function() {
+			this.model.destroy();
 		},
 
 		render: function() {
-			//
+			return this.$el.append(this.template(this.model.toJSON()));
 		}
 
-	})
+	});
 
 })();

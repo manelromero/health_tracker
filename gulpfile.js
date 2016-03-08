@@ -29,7 +29,7 @@ gulp.task('minifyJS', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('minifyHtml', function() {
+gulp.task('minifyHTML', function() {
 	gulp.src('app/**/*.html')
 	.pipe(htmlmin({
 		collapseWhitespace: true,
@@ -48,4 +48,4 @@ gulp.task('minifyCSS', function() {
 	.pipe(gulp.dest('dist'));
 });
 
-gulp.task('minify', ['minifyJS', 'minifyHtml', 'minifyCSS']);
+gulp.task('minify', ['minifyJS', 'minifyHTML', 'minifyCSS']);

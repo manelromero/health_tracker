@@ -8,11 +8,10 @@ var app = app || {};
 		template: _.template($('#search-template').html()),
 
 		events: {
-			'click': 'clicked'
+			'click': 'selected'
 		},
 
-		clicked: function() {
-
+		selected: function() {
 			var input = $('#search-input'),
 					resultsWindow = $('#results-window')[0];
 
@@ -21,18 +20,17 @@ var app = app || {};
 
 			var food = new app.Food({
 				name: this.model.get('food'),
-				calories: this.model.get('calories')
+				calories: app.viewHelpers.numberWithCommas(this.model.get('calories'))
 			});
 
 			app.foodList.add(food);
 			food.save();
-
 		},
 
 		render: function() {
 			return this.$el.html(this.template(this.model.toJSON()));
 		}
 
-	})
+	});
 
 })();
