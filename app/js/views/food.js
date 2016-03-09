@@ -11,6 +11,7 @@ var app = app || {};
 			'click': 'delete'
 		},
 
+		// When a food in the list is clicked
 		delete: function() {
 			this.model.destroy();
 		},

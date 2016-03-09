@@ -18,12 +18,18 @@
 		<div id="search" class="search">
       <label for="search-input">Food</label>
       <input id="search-input" placeholder="Which food are we talking about?" autofocus>
+      <div id="fetch-error" class="fetch-error">
+      	<p>Sorry, Nutritionix results are not available at this moment, please try again later.</p>
+      </div>
       <div id="results-window" class="results-window">
       	<ul id="search-list" class="search-list"></ul>
       </div>
 		</div>
 		<div id="list" class="list">
-			<h2>Your food list</h2>
+			<div class="food-list-header">
+				<h2>Your food list</h2>
+				<span id="clear" class="clear">(Clear list)</span>
+			</div>
 			<ul id="food-element" class="food-element"></ul>
 		</div>
 		<div class="footer">
@@ -34,6 +40,7 @@
 		</div>
 	</div>
 
+	<!-- Search results elements template -->
 	<script type="text/template" id="search-template">
 		<li class="result">
 			<div class="result-food"><%- food %></div>
@@ -41,6 +48,7 @@
 		</li>
 	</script>
 
+	<!-- Food list elements template -->
 	<script type="text/template" id="food-template">
 		<li class="food">
 			<div class="food-name"><%- name %></div>
@@ -51,12 +59,12 @@
 		</li>
 	</script>
 
-	<!-- Load scripts -->
+	<!-- Load library scripts -->
 	<script src="js/lib/jquery.js"></script>
 	<script src="js/lib/underscore.js"></script>
 	<script src="js/lib/backbone.js"></script>
 	<script src="js/lib/backbone.localStorage.js"></script>
-
+	<!-- Load scripts -->
 	<script src="js/models/food.js"></script>
 	<script src="js/models/search.js"></script>
 	<script src="js/views/app.js"></script>

@@ -21,7 +21,11 @@ body {
 	margin: auto;
 	margin-bottom: 1rem;
 	background-color: #fff;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	border-radius: 7px;
 	box-shadow: 0 0 10px rgba(33, 33, 33, 0.4);
@@ -42,7 +46,7 @@ h1 {
 }
 
 h2 {
-	font: 700 1.3rem/1.4rem 'Roboto Slab', serif;
+	font: 700 1.2rem/1.4rem 'Roboto Slab', serif;
 	color: #673ab7;
 	margin-bottom: 0.8rem;
 }
@@ -99,7 +103,11 @@ input {
 	font: 400 1rem/1.2rem Roboto, sans-serif;
 	padding: 1%;
 	color: #666;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
@@ -108,27 +116,10 @@ input {
 	cursor: pointer;
 }
 
-.food-list-header {
-	width: 100%;
-	align-items: baseline;
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.clear {
-	padding-left: 1rem;
-	font: 400 1rem 'Roboto Slab', serif;
-	color: #d1c4e9;
-	cursor: pointer;
-}
-
-.clear:hover {
-	color: #673ab7;
-}
-
 .result-food {
 	width: 70%;
 	padding-right: 1%;
+	text-align: justify;
 }
 
 .result-calories {
@@ -142,7 +133,11 @@ input {
 
 .food {
 	list-style: none;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
@@ -192,6 +187,7 @@ input {
 	color: #fff;
 }
 
+
 .footer {
 	width: 100%;
 	background-color: #ff9800;
@@ -203,7 +199,11 @@ input {
 	width: 100%;
 	float: right;
 	padding: 2%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
