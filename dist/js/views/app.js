@@ -1,0 +1,1 @@
+var app=app||{};!function(){"use strict";app.AppView=Backbone.View.extend({initialize:function(){new app.SearchListView,new app.FoodListView}}),app.viewHelpers={numberWithCommas:function(e){return e.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",")},totalCalories:function(){app.counter.html(app.viewHelpers.numberWithCommas(app._counter.toFixed(2))+" cal")}}}();

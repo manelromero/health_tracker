@@ -14,7 +14,6 @@ var app = app || {};
 		initialize: function() {
 			app.foodList = new app.FoodList();
 			app.counter = $('#counter');
-			app._counter = 0;
 			this.listenTo(app.foodList, 'sync', this.render);
 			this.listenTo(app.foodList, 'remove', this.render);
 			app.foodList.fetch();
@@ -22,9 +21,9 @@ var app = app || {};
 
 		render: function() {
 			var yourList = $('#food-element').empty();
-					// counter = $('#counter'),
-					// _counter = 0;
 
+			// Reset total calories
+			app._counter = 0;
 			app.foodList.each(function(food) {
 				// Create a new food view
 				var view = new app.FoodView({model: food});

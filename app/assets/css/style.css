@@ -129,6 +129,7 @@ input {
 .result-food {
 	width: 70%;
 	padding-right: 1%;
+	text-align: left;
 }
 
 .result-calories {
